@@ -28,6 +28,8 @@ Setting flutter
 
 Link instalasi :
 Flutter            : https://docs.flutter.dev/release/archive
+
 Command Line Tools : https://developer.android.com/studio?hl=id 
                       (buka di halaman paling bawah dengan judul "Command line tools only")
+                      
 Open JDK           : https://adoptopenjdk.net/
