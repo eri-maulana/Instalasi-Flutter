@@ -27,6 +27,7 @@ Setting flutter
 8. Selesai
 
 Link instalasi :
-Flutter: https://flutter.dev/docs/development/...
-Command Line Tools: https://developer.android.com/studio
-Open JDK: https://adoptopenjdk.net/
+Flutter            : https://docs.flutter.dev/release/archive
+Command Line Tools : https://developer.android.com/studio?hl=id 
+                      (buka di halaman paling bawah dengan judul "Command line tools only")
+Open JDK           : https://adoptopenjdk.net/
