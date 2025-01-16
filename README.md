@@ -25,3 +25,8 @@ Setting flutter
 6. Jalankan flutter doctor --android-licenses
 7. Jalankan flutter doctor
 8. Selesai
+
+Link instalasi :
+Flutter: https://flutter.dev/docs/development/...
+Command Line Tools: https://developer.android.com/studio
+Open JDK: https://adoptopenjdk.net/
