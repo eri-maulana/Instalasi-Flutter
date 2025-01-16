@@ -1,0 +1,9 @@
+cara install emulator tanpa android studio, yang akan kita gunakan untuk menjalankan project flutter.
+
+sdkmanager --list
+sdkmanager "system-images;android-28;google_apis;x86_64"
+sdkmanager --licenses
+avdmanager create avd -n test_avd_28 -k "system-images;android-28;google_apis;x86_64"
+avdmanager list avd
+cd %ANDROID_HOME%\sdk\emulator
+emulator -avd test_avd_28
