@@ -1,0 +1,37 @@
+1. buka terminal , lalu masukan perintah
+    keytool -genkey -v -keystore C:\Users\LENOVO\Documents\keystore\upload-keystore.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias introtech
+2. masukan password, disini saya menggunakan 12345eri
+3. buat folder keystore pada path yang kamu tambahkan di step 1, C:\Users\LENOVO\Documents\keystore
+4. buat file key.properties di folder android, lalu masukan kode berikut: 
+    storePassword=12345eri
+    keyPassword=12345eri
+    keyAlias=introtech
+    storeFile=C:\Users\LENOVO\Documents\keystore\upload-keystore.jks 
+5. buka android/app/build.gradle lalu tambahkan kode berikut :
+    def keystoreProperties = new Properties()
+    def keystorePropertiesFile = rootProject.file('key.properties')
+    if (keystorePropertiesFile.exists()) {
+        keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+    }
+
+    //simpan sebelum android {}
+
+    //didalam method andoid{}, timpa method buildTyoes dengan kode berikut  :
+
+    signingConfigs {
+          release {
+              keyAlias = keystoreProperties['keyAlias']
+              keyPassword = keystoreProperties['keyPassword']
+              storeFile = keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+              storePassword = keystoreProperties['storePassword']
+          }
+      }
+  
+      buildTypes {
+          release {
+              // TODO: Add your own signing config for the release build.
+              // Signing with the debug keys for now, so `flutter run --release` works.
+              signingConfig = signingConfigs.release
+          }
+      }
+    
