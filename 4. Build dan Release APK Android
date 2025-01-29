@@ -35,3 +35,4 @@
           }
       }
     
+6. jalankan perintah , flutter build apk --split-per-abi
