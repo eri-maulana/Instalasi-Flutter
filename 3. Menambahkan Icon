@@ -1,0 +1,13 @@
+1. buka link https://pub.dev/packages/flutter_native_splash
+2. buka terminal lalu jalankan perintah instal plugin tersebut , flutter pub add flutter_native_splash
+3. buat folder di root folder dengan nama assets, dan tambahkan gambar yang ingin dijadikan icon
+4. buka pubspec.yaml, lalu tambahkan kode berikut ,
+    flutter_native_splash:
+      color: "#ffffff"
+      image: assets/nama gambar yang ingin di jadikan icon
+5. jalankan perintah , dart run flutter_native_splash:create
+6. buka app/src/main/AndroidManifest.xml, lalu ubah 
+    android:icon="@mipmap/ic_launcher">
+    menjadi 
+    android:icon="@drawable/splash">
+7. Selesai
